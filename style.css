@@ -3,3 +3,20 @@ h1 {
     font-size: 32pt;
     text-align: center;
 }
+
+h2 {
+    font-family: monospace;
+    font-size: 24pt;
+}
+
+h3 {
+    font-family: monospace;
+    font-size: 14pt;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(174, 193, 228);
+    color: rgb(36, 3, 80);
+    width: 750px;
+}
