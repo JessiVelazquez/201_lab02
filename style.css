@@ -28,3 +28,11 @@ img {
     float: right;
     margin-right: 150px;
 }
+
+ul {
+    list-style: circle;
+}
+
+ol {
+    list-style: decimal;
+}

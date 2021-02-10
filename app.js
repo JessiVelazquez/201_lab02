@@ -128,4 +128,31 @@ switch(lowerwhidbeyIsland) {
         alert("Incorrect, I do live on Whidbey Island.")
 }
 
+let i = Math.floor(Math.random() * 100);
+console.log(i);
+let userGuess = Number.parseInt(prompt("Guess a number between 0-99"));
+console.log(userGuess); 
+let ctr = 0;
+
+while ((userGuess != i) && (ctr < 4)) {
+    console.log(userGuess + '');
+    if (userGuess < i) {
+        alert("Your guess is too low");
+    }
+    if (userGuess > i) {
+        alert("Your guess is too high");
+    }
+    else {
+        alert("You guessed correct!")
+        break
+    }
+    ctr = ctr + 1;
+    console.log(ctr);
+    if (ctr >= 4) {
+        alert("You are out of guesses. Correct answer was " + i + ".");
+        break
+    }
+    userGuess = prompt("Guess again.");
+}
+
 alert("Thanks for visiting my site, " + userName + "! Bye for now.")
