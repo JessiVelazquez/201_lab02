@@ -2,10 +2,10 @@
 
 let userName = prompt("What is your name?")
 alert ("Welcome to my 'About Me' site, " + userName +".")
-
+let correctCount = 0
 let gradYearUW = prompt("Did I graduate from University of Washington in 2008?");
 let lowergradYearUW = gradYearUW.toLowerCase();
-let correctCount = 0
+
 
 switch(lowergradYearUW) {
     case "yes":
@@ -149,32 +149,36 @@ switch(lowerwhidbeyIsland) {
         alert("Incorrect, I do live on Whidbey Island.")
 }
 
-let i = Math.floor(Math.random() * 100);
-console.log(i);
-let ctr = 0;
-let userGuess = ''
-
-while ((userGuess != i) && (ctr < 4)) {
-    let userGuess = parseInt(prompt("Guess a number between 0-99:"));
-    console.log(userGuess + '');
-    if (userGuess < i) {
-        alert("Your guess is too low");
-    }
-    if (userGuess > i) {
-        alert("Your guess is too high");
-    }
-    if (userGuess === i) {
-        alert("You guessed correct!");
-        correctCount++
-        break;
-    }
-    ctr = ctr + 1;
-    console.log(ctr);
-    if (ctr >= 4) {
-        alert("You are out of guesses. Correct answer was " + i + ".");
-        break;
+function numberGuess() {
+    let i = Math.floor(Math.random() * 100);
+    console.log(i);
+    let ctr = 0;
+    let userGuess = ''
+    while ((userGuess != i) && (ctr < 4)) {
+        let userGuess = parseInt(prompt("Guess a number between 0-99:"));
+        console.log(userGuess + '');
+        if (userGuess < i) {
+            alert("Your guess is too low");
+        }
+        if (userGuess > i) {
+            alert("Your guess is too high");
+        }
+        if (userGuess === i) {
+            alert("You guessed correct!");
+            correctCount++
+            break;
+        }
+        ctr = ctr + 1;
+        console.log(ctr);
+        if (ctr >= 4) {
+            alert("You are out of guesses. Correct answer was " + i + ".");
+            break;
+        }
     }
 }
+
+numberGuess();
+
 
 let favColors;
 favColors = ['blue', 'green', "yellow", "peach"]
