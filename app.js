@@ -130,11 +130,11 @@ switch(lowerwhidbeyIsland) {
 
 let i = Math.floor(Math.random() * 100);
 console.log(i);
-let userGuess = Number.parseInt(prompt("Guess a number between 0-99"));
-console.log(userGuess); 
 let ctr = 0;
+let userGuess = ''
 
 while ((userGuess != i) && (ctr < 4)) {
+    let userGuess = parseInt(prompt("Guess again."));
     console.log(userGuess + '');
     if (userGuess < i) {
         alert("Your guess is too low");
@@ -142,17 +142,34 @@ while ((userGuess != i) && (ctr < 4)) {
     if (userGuess > i) {
         alert("Your guess is too high");
     }
-    else {
-        alert("You guessed correct!")
-        break
+    if (userGuess === i) {
+        alert("You guessed correct!");
+        break;
     }
     ctr = ctr + 1;
     console.log(ctr);
     if (ctr >= 4) {
         alert("You are out of guesses. Correct answer was " + i + ".");
-        break
+        break;
     }
-    userGuess = prompt("Guess again.");
 }
+
+let favColors;
+favColors = ['blue', 'green', "yellow", "peach"]
+console.log('favorite colors', favColors)
+let guessAmount = 6
+
+for (let i = 1; i < guessAmount; i +=1) {
+    let colorGuess = prompt("Guess one of my favorite colors:")
+    if (colorGuess === favColors[0] || colorGuess === favColors[1] || colorGuess === favColors[2] || colorGuess === favColors[3]) {
+        console.log(colorGuess)
+        alert("You are correct!")
+        break;
+    }
+    else {
+        alert("Incorrect, guess again:");
+    } 
+}
+
 
 alert("Thanks for visiting my site, " + userName + "! Bye for now.")
