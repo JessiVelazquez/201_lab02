@@ -197,3 +197,4 @@ for (let i = 1; i < guessAmount; i +=1) {
 
 
 alert("Thanks for visiting my site, " + userName + "! Bye for now. You got " + correctCount + " answers right.")
+
