@@ -1,3 +1,7 @@
+body {
+    background-color: lemonchiffon;
+}
+
 h1 {
     font-family: monospace;
     font-size: 32pt;
@@ -31,8 +35,18 @@ img {
 
 ul {
     list-style: circle;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(174, 193, 228);
+    color: rgb(36, 3, 80);
+    width: 600px;
+    margin-left: 100px;
 }
 
 ol {
     list-style: decimal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(174, 193, 228);
+    color: rgb(36, 3, 80);
+    width: 600px;
+    margin-left: 100px;
 }
