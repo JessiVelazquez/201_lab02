@@ -5,23 +5,28 @@ alert ("Welcome to my 'About Me' site, " + userName +".")
 
 let gradYearUW = prompt("Did I graduate from University of Washington in 2008?");
 let lowergradYearUW = gradYearUW.toLowerCase();
+let correctCount = 0
 
 switch(lowergradYearUW) {
     case "yes":
         //console.log("Correct, I did graduate UW in 2008!");
         alert("Correct, I did graduate UW in 2008!");
+        correctCount++
         break;
     case "y":
         //console.log("Correct, I did graduate UW in 2008!");
         alert("Correct, I did graduate UW in 2008!");
+        correctCount++
         break;
     case "true":
         //console.log("Correct, I did graduate UW in 2008!");
         alert("Correct, I did graduate UW in 2008!");
+        correctCount++
         break;
     case "t":
         //console.log("Correct, I did graduate UW in 2008!");
         alert("Correct, I did graduate UW in 2008!");
+        correctCount++
         break;
     default:
         //console.log("Incorrect. I graduated UW in 2008.");
@@ -35,18 +40,22 @@ switch(lowerhobbyHike) {
     case "yes":
         //console.log("Correct, I do like to hike!");
         alert("Correct, I do like to hike!");
+        correctCount++
         break;
     case "y":
         //console.log("Correct, I do like to hike!");
         alert("Correct, I do like to hike!");
+        correctCount++
         break;
     case "true":
         //console.log("Correct, I do like to hike!");
         alert("Correct, I do like to hike!");
+        correctCount++
         break;
     case "t":
         //console.log("Correct, I do like to hike!");
         alert("Correct, I do like to hike!");
+        correctCount++
         break;
     default:
         //console.log("Incorrect. I like to hike.");
@@ -60,18 +69,22 @@ switch(lowerjobInnovasea) {
     case "yes":
         //console.log("Correct! Yes I did");
         alert("Correct! Yes I did");
+        correctCount++
         break;
     case "y":
         //console.log("Correct! Yes I did");
         alert("Correct! Yes I did");
+        correctCount++
         break;
     case "true":
         //console.log("Correct! Yes I did");
         alert("Correct! Yes I did");
+        correctCount++
         break;
-    case "y":
+    case "t":
         //console.log("Correct! Yes I did");
         alert("Correct! Yes I did");
+        correctCount++
         break;
     default:
         //console.log("Incorrect, I did work for Innovasea.");
@@ -85,18 +98,22 @@ switch(lowersoloAlbum) {
     case "yes":
         //console.log("Correct, I have released a solo album.");
         alert("Correct, I have released a solo album.");
+        correctCount++
         break;
     case "y":
         //console.log("Correct, I have released a solo album.");
         alert("Correct, I have released a solo album.");
+        correctCount++
         break;
     case "true":
         //console.log("Correct, I have released a solo album.");
         alert("Correct, I have released a solo album.");
+        correctCount++
         break;
     case "t":
         //console.log("Correct, I have released a solo album.");
         alert("Correct, I have released a solo album.");
+        correctCount++
         break;
     default:
         //console.log("Incorrect. I have released multiple of them.");
@@ -110,18 +127,22 @@ switch(lowerwhidbeyIsland) {
     case "yes":
         //console.log("Correct, I live on Whidbey Island.");
         alert("Correct, I live on Whidbey Island.");
+        correctCount++
         break;
     case "y":
         //console.log("Correct, I live on Whidbey Island.");
         alert("Correct, I live on Whidbey Island.");
+        correctCount++
         break;
     case "true":
         //console.log("Correct, I live on Whidbey Island.");
         alert("Correct, I live on Whidbey Island.");
+        correctCount++
         break;
     case "t":
         //console.log("Correct, I live on Whidbey Island.");
         alert("Correct, I live on Whidbey Island.");
+        correctCount++
         break;
     default:
         //console.log("Incorrect, I do live on Whidbey Island.")
@@ -134,7 +155,7 @@ let ctr = 0;
 let userGuess = ''
 
 while ((userGuess != i) && (ctr < 4)) {
-    let userGuess = parseInt(prompt("Guess again."));
+    let userGuess = parseInt(prompt("Guess a number between 0-99:"));
     console.log(userGuess + '');
     if (userGuess < i) {
         alert("Your guess is too low");
@@ -144,6 +165,7 @@ while ((userGuess != i) && (ctr < 4)) {
     }
     if (userGuess === i) {
         alert("You guessed correct!");
+        correctCount++
         break;
     }
     ctr = ctr + 1;
@@ -164,6 +186,8 @@ for (let i = 1; i < guessAmount; i +=1) {
     if (colorGuess === favColors[0] || colorGuess === favColors[1] || colorGuess === favColors[2] || colorGuess === favColors[3]) {
         console.log(colorGuess)
         alert("You are correct!")
+        alert(favColors + " were possible answers")
+        correctCount++
         break;
     }
     else {
@@ -172,4 +196,4 @@ for (let i = 1; i < guessAmount; i +=1) {
 }
 
 
-alert("Thanks for visiting my site, " + userName + "! Bye for now.")
+alert("Thanks for visiting my site, " + userName + "! Bye for now. You got " + correctCount + " answers right.")
